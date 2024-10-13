@@ -1,4 +1,151 @@
-/* Yleiset tyylit */
+/* Yleiset asetukset */
+body {
+    font-family: 'Cardo', serif;  
+    margin: 0;
+    padding: 0;
+    background-image: url('kukatt.jpg'); /* Aseta taustakuva */
+    background-size: cover; /* Skaalaa kuva täyttämään koko sivun */
+    background-position: center; /* Keskittää kuvan */
+    background-repeat: no-repeat; /* Estää kuvan toistamisen */
+    height: 100vh; /* Koko sivun korkeus */
+    color: white; /* Valkoinen teksti */
+    position: relative; /* Varmistaa, että tekstit ovat taustakuvan päällä */
+}
+
+/* Header ja h1: Vasemmassa yläkulmassa */
+header {
+    position: absolute;
+    top: 10px;  
+    left: 20px;  
+    z-index: 2; /* Aseta tekstin päälle */
+}
+
+header h1 {
+    font-size: 50px;  
+    text-transform: uppercase;  
+    margin: 0; /* Poistetaan marginaali */
+}
+
+/* H2-otsikon keskitys */
+main {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;  
+    margin-top: 100px; 
+    width: 100%;
+    z-index: 2; /* Pidetään teksti taustakuvan päällä */
+}
+
+main h2 {
+    font-size: 40px; 
+    font-style: italic; 
+    margin-bottom: 20px; /* Lisää tilaa h2:n ja kuvien väliin */
+}
+
+/* Kuvien asettelu */
+.kuvat {
+    display: flex;
+    justify-content: center; /* Keskittää kuvat vaakasuunnassa */
+    align-items: center; /* Keskittää kuvat pystysuunnassa */
+    margin-top: 20px; /* Lisää marginaalia ylhäältä, ettei teksti peity */
+    z-index: 2; /* Kuvien pitää olla taustakuvan päällä */
+}
+
+.kuva {
+    width: 500px; 
+    height: 400px;
+    object-fit: cover; 
+    margin: 0 10px; /* Tasaa väliä kuvien välille */
+}
+
+/* Valikko */
+.valikko {
+    display: flex; /* Käytä flexboxia */
+    flex-direction: column; /* Aseta pystysuunnassa */
+    align-items: center; /* Keskitetään painike ja valikko */
+    margin-top: 40px; /* Lisää tilaa valikkopainikkeen ylle */
+    z-index: 3; /* Varmistaa, että valikko näkyy taustakuvan päällä */
+}
+
+/* Valikkopainike */
+.valikkopainike {
+    padding: 10px 20px;
+    background-color: #29532a; /* Vihreä väri */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;  /* Muuttaa tekstin isoiksi kirjaimiksi */
+    font-family: 'Cardo', serif; /* Aseta fontiksi Cardo */
+    margin-bottom: 10px; /* Lisää tilaa valikkopainikkeen ja valikon väliin */
+    z-index: 2; /* Nostetaan valikon taso taustakuvan päälle */
+}
+
+/* Valikon sisältö */
+.valikko-sisalto {
+    display: none; /* Piilotetaan valikko aluksi */
+    position: absolute;
+    background-color: #f9f9f9; /* Valikon taustaväri */
+    min-width: 160px; /* Valikon leveys */
+    margin-top: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Varjostus valikolle */
+    z-index: 3; /* Varmistaa, että valikko avautuu kaiken päälle */
+}
+
+.valikko-sisalto a {
+    color: black; /* Linkkien väri */
+    padding: 12px 16px;
+    text-decoration: none; /* Poistetaan alleviivaus */
+    display: block;
+}
+
+.valikko-sisalto a:hover {
+    background-color: #f1f1f1; /* Hover-väri */
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px; /* Pienennetään otsikon kokoa pienillä näytöillä */
+    }
+
+    main h2 {
+        font-size: 24px; /* Pienennetään h2-otsikon kokoa */
+    }
+
+    .kuva {
+        width: 90%; /* Kuvien leveys 90% pienillä näytöillä */
+        height: auto; /* Korkeus automaattinen */
+        margin: 10px 0; /* Tasaa väliä ylhäältä ja alhaalta */
+    }
+
+    .valikkopainike {
+        font-size: 14px; /* Pienennetään valikkopainikkeen kokoa */
+        padding: 8px 16px; /* Pienennetään paddingia */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px; /* Vielä pienempi otsikon koko */
+    }
+
+    main h2 {
+        font-size: 20px; /* Vähennetään h2-otsikon kokoa */
+    }
+
+    .kuva {
+        height: 200px; /* Kiinteä korkeus kaikille kuville pienillä näytöillä */
+    }
+
+    .valikkopainike {
+        font-size: 12px; /* Pienennetään valikkopainikkeen kokoa */
+    }
+}
+
+/* Toinen CSS-koodi */
+
+ /* Yleiset tyylit */
 body {
     font-family: 'Cardo', serif;  
     margin: 0;
@@ -87,3 +234,7 @@ body {
 .valikko-sisalto a:hover {
     background-color: #f1f1f1;
 }
+
+/* Responsiivisuus toiseen CSS-koodiin */
+@media (max-width: 768px) {
+    .otsikko
