@@ -19,7 +19,6 @@
             height: auto; /* Salli korkeuden mukautuminen sisällön mukaan */
             min-height: 100vh; /* Varmista, että kattaa näkymän korkeuden */
         }
-
         /* Header-osa */
         .header {
             display: flex;
@@ -30,7 +29,6 @@
             padding: 0 20px;
             position: relative;
         }
-
         /* Portfolio-otsikko ilman taustaa */
         .otsikko {
             color: black;              /* Musta väri */
@@ -39,7 +37,6 @@
             font-style: italic;       /* Vinottain */
             margin-left: 20px;        /* Valinnainen marginaali painikkeen viereen */
         }
-
         /* Valikkopainike */
         .valikkonappi {
             background-color: #2f6331;
@@ -53,7 +50,6 @@
             font-family: 'Cardo', serif;
             position: relative;
         }
-
         /* Kollaasi-asettelu */
         .collage {
             display: grid;
@@ -62,13 +58,11 @@
             margin-top: 30px; /* Tilaa headerin alle */
             width: 90%; /* Responsiivinen leveys */
         }
-
         .collage img {
             width: 100%; /* Täysi leveys jokaiselle kuvalle */
             border-radius: 5px;
             height: auto; /* Säilytä kuvasuhde */
         }
-
         /* Valikon sisältö */
         .valikko-sisalto {
             display: none;
@@ -81,26 +75,22 @@
             z-index: 1;
             border-radius: 5px;
         }
-
         .valikko-sisalto a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
-
         .valikko-sisalto a:hover {
             background-color: #f1f1f1;
         }
     </style>
 </head>
 <body>
-
     <div class="header">
         <button class="valikkonappi" onclick="toggleValikko()">VALIKKO</button>
         <div class="otsikko">Portfolio</div>
     </div>
-
     <!-- Collage section -->
     <div class="collage">
         <img src="sieni.jpg" alt="Kuva 1">
@@ -112,13 +102,11 @@
         <img src="tuli.jpg" alt="Kuva 7">
         <img src="kenka.jpg" alt="Kuva 8">
     </div>
-
     <!-- Menu content -->
     <div class="valikko-sisalto" id="valikkoSisalto">
-        <a href="Index.html">Etusivu</a>
+        <a href="index.html">Etusivu</a>
         <a href="Tietoaminusta.html">Tietoa minusta</a>
     </div>
-
     <script>
         function toggleValikko() {
             const valikkoSisalto = document.getElementById("valikkoSisalto");
@@ -128,7 +116,6 @@
                 valikkoSisalto.style.display = "block";
             }
         }
-
         window.onclick = function(event) {
             if (!event.target.matches('.valikkonappi')) {
                 const valikkoSisalto = document.getElementById("valikkoSisalto");
@@ -138,6 +125,5 @@
             }
         }
     </script>
-
 </body>
 </html>
