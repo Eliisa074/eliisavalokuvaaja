@@ -1,6 +1,6 @@
 /* Yleiset tyylit */
 body {
-    font-family: 'Cardo', serif;  /* Cardo kaikille elementeille oletuksena */
+    font-family: 'Cardo', serif;  
     margin: 0;
     padding: 0;
     background-color: #a7b69c;
@@ -113,99 +113,93 @@ header h1 {
 }
 
 /* Responsiivisuus */
-@media (max-width: 1024px) {
-    .pyorea-kuva {
-        width: 300px;
-        height: 300px;
-    }
-
-    .vasen-teksti {
-        font-size: 20px;
-        top: 320px;
-        left: 40px;
-        width: 250px;
-    }
-
-    .kuva-container {
-        top: 60px;
-        right: 40px;
-    }
-
-    .sivukuva {
-        width: 300px;
-    }
-
-    header h1 {
-        font-size: 40px;
-    }
-
-    .valikkopainike {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-}
-
 @media (max-width: 768px) {
-    .pyorea-kuva {
-        width: 250px;
-        height: 250px;
-    }
-
-    .vasen-teksti {
-        font-size: 18px;
-        top: 300px;
-        left: 30px;
-        width: 200px;
-    }
-
-    .kuva-container {
-        top: 50px;
-        right: 30px;
-    }
-
-    .sivukuva {
-        width: 250px;
-    }
-
     header h1 {
         font-size: 35px;
     }
 
+    .pyorea-kuva {
+        width: 300px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .oikea-teksti {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .vasen-teksti {
+        font-size: 18px;
+        width: 90%;
+        left: 10px;
+        top: 400px;
+    }
+
+    .kuva-container {
+        top: 500px;
+        right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sivukuva {
+        width: 48%;
+        height: 200px;
+    }
+
     .valikkopainike {
-        font-size: 12px;
-        padding: 6px 12px;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .valikko {
+        top: 150px;
+        left: 10px;
     }
 }
 
 @media (max-width: 480px) {
+    header h1 {
+        font-size: 28px;
+    }
+
     .pyorea-kuva {
         width: 200px;
         height: 200px;
     }
 
+    .oikea-teksti {
+        font-size: 14px;
+    }
+
     .vasen-teksti {
         font-size: 16px;
-        top: 280px;
-        left: 20px;
-        width: 150px;
+        width: 95%;
+        top: 420px;
     }
 
     .kuva-container {
-        top: 40px;
-        right: 20px;
+        top: 450px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .sivukuva {
-        width: 200px;
-    }
-
-    header h1 {
-        font-size: 30px;
+        width: 100%;
+        margin-bottom: 15px;
+        height: 150px;
     }
 
     .valikkopainike {
-        font-size: 10px;
-        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .valikko {
+        top: 100px;
+        left: 5px;
     }
 }
-
