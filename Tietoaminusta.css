@@ -1,0 +1,113 @@
+/* Yleiset tyylit */
+body {
+    font-family: 'Cardo', serif;  /* Cardo kaikille elementeille oletuksena */
+    margin: 0;
+    padding: 0;
+    background-color: #a7b69c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header ja h1 */
+header {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+header h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+/* Valikkopainike vasemmassa reunassa */
+.valikko {
+    position: absolute;
+    left: 20px;
+    top: 250px;
+    text-align: left;
+}
+
+.valikkopainike {
+    padding: 10px 20px;
+    background-color: #2f6331;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Cardo', serif !important; /* Pakottaa fontin käytön */
+}
+
+/* Valikon sisältö */
+.valikko-sisalto {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    margin-top: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.valikko-sisalto a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.valikko-sisalto a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Pyöreä kuva */
+.pyorea-kuva {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 80px;
+    margin-left: 62px;
+    margin-right: auto;
+    display: block;
+}
+
+/* Teksti pyöreän kuvan alapuolella */
+.oikea-teksti {
+    font-size: 20px;
+    color: black;
+    width: 600px;
+    text-align: center;
+    margin-top: 45px;
+}
+
+/* Vasemman puolen teksti */
+.vasen-teksti {
+    font-family: 'Cardo', serif !important; /* Pakottaa fontin käytön */
+    position: absolute;
+    left: 60px;
+    top: 350px;
+    font-size: 24px;
+    color: black;
+    width: 300px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Oikean puolen kuvat */
+.kuva-container {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sivukuva {
+    width: 400px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}

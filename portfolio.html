@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        body {
+            font-family: 'Cardo', serif;  
+            margin: 0;
+            padding: 0;
+            background-color: #a7b69c;  
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: flex-start; /* Pidetään sisältö ylhäällä */ 
+            height: auto; /* Salli korkeuden mukautuminen sisällön mukaan */
+            min-height: 100vh; /* Varmista, että kattaa näkymän korkeuden */
+        }
+
+        /* Header-osa */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            width: 90%; /* Dynaaminen leveys */
+            margin-top: 20px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        /* Portfolio-otsikko ilman taustaa */
+        .otsikko {
+            color: black;              /* Musta väri */
+            font-size: 40px;          /* Fonttikoko */
+            text-align: center;       /* Keskitetään teksti */
+            font-style: italic;       /* Vinottain */
+            margin-left: 20px;        /* Valinnainen marginaali painikkeen viereen */
+        }
+
+        /* Valikkopainike */
+        .valikkonappi {
+            background-color: #2f6331;
+            color: white;
+            padding: 15px 20px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-family: 'Cardo', serif;
+            position: relative;
+        }
+
+        /* Kollaasi-asettelu */
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 saraketta */
+            gap: 10px; /* Kuvien väli */
+            margin-top: 30px; /* Tilaa headerin alle */
+            width: 90%; /* Responsiivinen leveys */
+        }
+
+        .collage img {
+            width: 100%; /* Täysi leveys jokaiselle kuvalle */
+            border-radius: 5px;
+            height: auto; /* Säilytä kuvasuhde */
+        }
+
+        /* Valikon sisältö */
+        .valikko-sisalto {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            top: 50px; /* Asetetaan valikko 50px painikkeen alapuolelle */
+            left: 0; /* Kiinnitetään vasemmalle */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .valikko-sisalto a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .valikko-sisalto a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <button class="valikkonappi" onclick="toggleValikko()">VALIKKO</button>
+        <div class="otsikko">Portfolio</div>
+    </div>
+
+    <!-- Collage section -->
+    <div class="collage">
+        <img src="sieni.jpg" alt="Kuva 1">
+        <img src="toka.jpg" alt="Kuva 2">
+        <img src="orava.jpg" alt="Kuva 3">
+        <img src="ilta.jpg" alt="Kuva 4">
+        <img src="KAAKI.jpg" alt="Kuva 5">
+        <img src="juoksu.jpg" alt="Kuva 6">
+        <img src="tuli.jpg" alt="Kuva 7">
+        <img src="kenka.jpg" alt="Kuva 8">
+    </div>
+
+    <!-- Menu content -->
+    <div class="valikko-sisalto" id="valikkoSisalto">
+        <a href="Index.html">Etusivu</a>
+        <a href="Tietoaminusta.html">Tietoa minusta</a>
+    </div>
+
+    <script>
+        function toggleValikko() {
+            const valikkoSisalto = document.getElementById("valikkoSisalto");
+            if (valikkoSisalto.style.display === "block") {
+                valikkoSisalto.style.display = "none";
+            } else {
+                valikkoSisalto.style.display = "block";
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.valikkonappi')) {
+                const valikkoSisalto = document.getElementById("valikkoSisalto");
+                if (valikkoSisalto.style.display === "block") {
+                    valikkoSisalto.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
