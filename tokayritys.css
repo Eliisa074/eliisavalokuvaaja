@@ -11,6 +11,7 @@ body {
     color: white; /* Valkoinen teksti */
     position: relative; /* Varmistaa, että tekstit ovat taustakuvan päällä */
 }
+
 /* Header ja h1: Vasemmassa yläkulmassa */
 header {
     position: absolute;
@@ -18,6 +19,7 @@ header {
     left: 20px;  
     z-index: 2; /* Aseta tekstin päälle */
 }
+
 header h1 {
     font-size: 50px;  
     text-transform: uppercase;  
@@ -99,4 +101,44 @@ main h2 {
 
 .valikko-sisalto a:hover {
     background-color: #f1f1f1; /* Hover-väri */
+}
+
+/* Responsiiviset asetukset */
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 40px; /* Pienennä fonttikokoa keskikokoisilla näytöillä */
+    }
+
+    main h2 {
+        font-size: 35px; /* Pienennä h2-kokoa keskikokoisilla näytöillä */
+    }
+}
+
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 30px; /* Pienennä fonttikokoa pienemmillä näytöillä */
+    }
+
+    main h2 {
+        font-size: 30px; /* Pienennä h2-kokoa pienemmillä näytöillä */
+    }
+}
+
+@media (max-width: 768px) {
+    .kuva {
+        width: 90%; /* Kuvien leveys 90% pienillä näytöillä */
+        height: auto; /* Korkeus automaattisesti */
+    }
+
+    .kuvat {
+        flex-direction: column; /* Aseta kuvat pinoon */
+    }
+
+    .valikkopainike {
+        width: 100%; /* Valikkopainike vie koko leveyden */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Tässä voi olla erityiset asetukset hyvin pienille näytöille, kuten puhelimille */
 }
