@@ -3,8 +3,8 @@
 <head>
     <link rel="stylesheet" href="Tietoaminusta.css"> <!-- Oletetaan, että tiedoston nimi on Tietoaminusta.css -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyWebsite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsiivisuus asetettu -->
+    <title>Tietoa minusta</title>
     <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -29,12 +29,12 @@
             </div>
         </div>
 
-          <!-- Teksti vasemmalle puolelle, rivitetty allekkain -->
-    <div class="vasen-teksti">
-        <p>Olen Eliisa, innokas valokuvaaja ja haluan oppia siitä paljon lisää.</p>
-        <p>Tällä sivulla voit nähdä jo joitakin otoksiani, mutta tarkoitus on lisätä kuvia ajan myötä lisää.</p>
-        <p>Minua voi kysyä pienelläkin budjetilla kuvaamaan juhlia, merkkipäiviä, tai mitä mieleen juolahtaa.</p>
-    </div>
+        <!-- Teksti vasemmalle puolelle -->
+        <div class="vasen-teksti">
+            <p>Olen Eliisa, innokas valokuvaaja ja haluan oppia siitä paljon lisää.</p>
+            <p>Tällä sivulla voit nähdä jo joitakin otoksiani, mutta tarkoitus on lisätä kuvia ajan myötä lisää.</p>
+            <p>Minua voi kysyä pienelläkin budjetilla kuvaamaan juhlia, merkkipäiviä, tai mitä mieleen juolahtaa.</p>
+        </div>
 
         <!-- Teksti oikealla -->
         <p class="oikea-teksti">
@@ -47,9 +47,9 @@
             <img src="haapaikka.jpg" alt="Kuva 2" class="sivukuva">
             <img src="pinkki.jpg" alt="Kuva 3" class="sivukuva">
         </div>
-
     </main>
 
+    <!-- Valikon avaamislogiikka -->
     <script>
         function toggleValikko() {
             const valikkoSisalto = document.getElementById("valikkoSisalto");
@@ -69,5 +69,5 @@
             }
         }
     </script>
-
 </body>
+</html>
