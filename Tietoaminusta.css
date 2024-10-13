@@ -8,26 +8,18 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-}
-
-/* Header ja h1 */
-header {
-    position: absolute;
-    top: 10px;
-    left: 20px;
+    box-sizing: border-box;
 }
 
 header h1 {
     font-size: 50px;
     text-transform: uppercase;
+    margin: 20px 0;
 }
 
 /* Valikkopainike vasemmassa reunassa */
 .valikko {
-    position: absolute;
-    left: 20px;
-    top: 250px;
-    text-align: left;
+    margin-bottom: 20px;
 }
 
 .valikkopainike {
@@ -38,18 +30,15 @@ header h1 {
     cursor: pointer;
     font-size: 16px;
     text-transform: uppercase;
-    font-family: 'Cardo', serif !important; /* Pakottaa fontin käytön */
+    font-family: 'Cardo', serif;
 }
 
 /* Valikon sisältö */
 .valikko-sisalto {
     display: none;
-    position: relative;
     background-color: #f9f9f9;
-    min-width: 160px;
-    margin-top: 10px;
+    position: relative;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
 }
 
 .valikko-sisalto a {
@@ -65,50 +54,44 @@ header h1 {
 
 /* Pyöreä kuva */
 .pyorea-kuva {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 80px;
-    margin-left: 62px;
-    margin-right: auto;
-    display: block;
+    margin: 20px 0;
 }
 
-/* Teksti pyöreän kuvan alapuolella */
-.oikea-teksti {
-    font-size: 20px;
-    color: black;
-    width: 600px;
-    text-align: center;
-    margin-top: 45px;
-}
-
-/* Vasemman puolen teksti */
-.vasen-teksti {
-    font-family: 'Cardo', serif !important; /* Pakottaa fontin käytön */
-    position: absolute;
-    left: 60px;
-    top: 350px;
-    font-size: 24px;
-    color: black;
-    width: 300px;
-    line-height: 1.5;
+/* Tekstien asettelu */
+.teksti-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px 0;
     text-align: left;
 }
 
-/* Oikean puolen kuvat */
+.vasen-teksti {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.oikea-teksti {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* Kuvien asettelu */
 .kuva-container {
-    position: absolute;
-    top: 80px;
-    right: 80px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .sivukuva {
-    width: 400px;
-    margin-bottom: 20px;
+    width: 200px;
+    margin: 10px;
     object-fit: cover;
 }
 
@@ -119,46 +102,17 @@ header h1 {
     }
 
     .pyorea-kuva {
-        width: 300px;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .oikea-teksti {
-        width: 90%;
-        font-size: 16px;
-    }
-
-    .vasen-teksti {
-        font-size: 18px;
-        width: 90%;
-        left: 10px;
-        top: 400px;
-    }
-
-    .kuva-container {
-        top: 500px;
-        right: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .sivukuva {
-        width: 48%;
+        width: 200px;
         height: 200px;
     }
 
-    .valikkopainike {
-        font-size: 14px;
-        padding: 10px;
+    .vasen-teksti,
+    .oikea-teksti {
+        font-size: 16px;
     }
 
-    .valikko {
-        top: 150px;
-        left: 10px;
+    .sivukuva {
+        width: 150px;
     }
 }
 
@@ -168,38 +122,16 @@ header h1 {
     }
 
     .pyorea-kuva {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
+    .vasen-teksti,
     .oikea-teksti {
         font-size: 14px;
     }
 
-    .vasen-teksti {
-        font-size: 16px;
-        width: 95%;
-        top: 420px;
-    }
-
-    .kuva-container {
-        top: 450px;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .sivukuva {
-        width: 100%;
-        margin-bottom: 15px;
-        height: 150px;
-    }
-
-    .valikkopainike {
-        font-size: 12px;
-    }
-
-    .valikko {
-        top: 100px;
-        left: 5px;
+        width: 120px;
     }
 }
